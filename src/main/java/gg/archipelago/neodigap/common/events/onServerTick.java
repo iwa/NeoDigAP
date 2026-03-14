@@ -1,14 +1,14 @@
 package gg.archipelago.neodigap.common.events;
 
 import gg.archipelago.neodigap.APRandomizer;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import gg.archipelago.neodigap.managers.FossilManager;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(modid = APRandomizer.MODID)
 public class onServerTick {
 
     static double count = 0;

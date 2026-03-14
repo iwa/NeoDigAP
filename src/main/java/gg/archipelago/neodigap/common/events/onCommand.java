@@ -3,13 +3,14 @@ package gg.archipelago.neodigap.common.events;
 import gg.archipelago.neodigap.APRandomizer;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;
-import net.minecraftforge.event.CommandEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.CommandEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
 
 import java.util.ArrayList;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(modid = APRandomizer.MODID)
 public class onCommand {
 
     private static final ArrayList<String> allowedCommands = new ArrayList<>() {{

@@ -1,4 +1,4 @@
-package gg.archipelago.neodigap.common.Utils;
+package gg.archipelago.neodigap.common.utils;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import gg.archipelago.neodigap.APRandomizer;

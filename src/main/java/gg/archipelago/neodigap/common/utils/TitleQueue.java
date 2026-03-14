@@ -1,15 +1,15 @@
-package gg.archipelago.neodigap.common.Utils;
+package gg.archipelago.neodigap.common.utils;
 
 import gg.archipelago.neodigap.APRandomizer;
 import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.LinkedList;
 import java.util.List;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(modid = APRandomizer.MODID)
 public class TitleQueue {
 
     static List<QueuedTitle> titleQueue = new LinkedList<>();

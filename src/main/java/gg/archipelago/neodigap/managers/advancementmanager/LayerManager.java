@@ -1,19 +1,19 @@
 package gg.archipelago.neodigap.managers.advancementmanager;
 
 import gg.archipelago.neodigap.APRandomizer;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.*;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(modid = APRandomizer.MODID)
 public class LayerManager {
 
     private static final Set<Integer> checkLayers = new HashSet<>();

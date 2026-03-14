@@ -1,7 +1,7 @@
 package gg.archipelago.neodigap.managers;
 
 import gg.archipelago.neodigap.APRandomizer;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

@@ -1,6 +1,6 @@
 package gg.archipelago.neodigap;
 
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import gg.archipelago.neodigap.events.AttemptedConnection;
 import gg.archipelago.neodigap.events.ConnectResult;
 import gg.archipelago.neodigap.events.PrintJson;

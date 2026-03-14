@@ -1,4 +1,4 @@
-package gg.archipelago.neodigap.common.Utils;
+package gg.archipelago.neodigap.common.utils;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.*;

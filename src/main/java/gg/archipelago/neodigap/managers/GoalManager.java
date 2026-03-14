@@ -3,7 +3,7 @@ package gg.archipelago.neodigap.managers;
 import gg.archipelago.neodigap.managers.advancementmanager.LayerManager;
 import gg.archipelago.neodigap.APRandomizer;
 import gg.archipelago.neodigap.APStorage.APMCData;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import io.github.archipelagomw.ClientStatus;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -18,9 +18,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.BossEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber(modid = APRandomizer.MODID)
 public class GoalManager {
 
     private final LayerManager layerManager;

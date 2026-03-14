@@ -1,7 +1,7 @@
 package gg.archipelago.neodigap.events;
 
 import gg.archipelago.neodigap.APClient;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import io.github.archipelagomw.Print.APPrint;
 import io.github.archipelagomw.events.ArchipelagoEventListener;
 import io.github.archipelagomw.events.PrintJSONEvent;

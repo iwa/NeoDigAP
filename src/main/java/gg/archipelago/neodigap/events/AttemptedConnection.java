@@ -3,7 +3,7 @@ package gg.archipelago.neodigap.events;
 import gg.archipelago.neodigap.APRandomizer;
 import gg.archipelago.neodigap.APStorage.APMCData;
 import gg.archipelago.neodigap.SlotData;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import io.github.archipelagomw.events.ArchipelagoEventListener;
 import io.github.archipelagomw.events.ConnectionAttemptEvent;
 

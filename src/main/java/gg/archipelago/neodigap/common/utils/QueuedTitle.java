@@ -1,4 +1,4 @@
-package gg.archipelago.neodigap.common.Utils;
+package gg.archipelago.neodigap.common.utils;
 
 import gg.archipelago.neodigap.APRandomizer;
 import net.minecraft.network.chat.Component;

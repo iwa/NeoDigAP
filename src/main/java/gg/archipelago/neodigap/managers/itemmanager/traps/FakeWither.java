@@ -11,10 +11,10 @@ import net.minecraft.world.BossEvent;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.LogicalSide;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.LogicalSide;
 
 public class FakeWither implements Trap {
 
@@ -31,7 +31,7 @@ public class FakeWither implements Trap {
     }
 
     public FakeWither() {
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
     }
     @Override
     public void trigger(ServerPlayer player) {
@@ -55,7 +55,7 @@ public class FakeWither implements Trap {
         if(value >= witherBar.getMax()) {
             witherBar.setValue(0);
             witherBar.setVisible(false);
-            MinecraftForge.EVENT_BUS.unregister(this);
+            NeoForge.EVENT_BUS.unregister(this);
             return;
         }
         witherBar.setValue(++value);

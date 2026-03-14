@@ -1,7 +1,7 @@
 package gg.archipelago.neodigap.gui;
 
 import gg.archipelago.neodigap.APRandomizer;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import gg.archipelago.neodigap.managers.ShopManager;
 import io.github.archipelagomw.flags.NetworkItem;
 import net.minecraft.nbt.CompoundTag;

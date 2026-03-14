@@ -1,7 +1,7 @@
 package gg.archipelago.neodigap.managers.itemmanager.traps;
 
 import gg.archipelago.neodigap.APRandomizer;
-import gg.archipelago.neodigap.common.Utils.Utils;
+import gg.archipelago.neodigap.common.utils.Utils;
 import gg.archipelago.neodigap.managers.advancementmanager.CustomAdvancementHandler;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -13,10 +13,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.event.entity.living.LivingHurtEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -35,7 +35,7 @@ public class GoonTrap implements Trap {
     }
 
     public GoonTrap(int numberOfGoons) {
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
         this.numberOfGoons = numberOfGoons;
     }
     @Override
@@ -81,6 +81,6 @@ public class GoonTrap implements Trap {
         for (ServerPlayer player : players) {
             CustomAdvancementHandler.grantAdvancement(player,new ResourceLocation(APRandomizer.MODID,"archipelago/dodge_fish"));
         }
-        MinecraftForge.EVENT_BUS.unregister(this);
+        NeoForge.EVENT_BUS.unregister(this);
     }
 }
