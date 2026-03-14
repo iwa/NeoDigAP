@@ -1,7 +1,11 @@
 pluginManagement {
-    plugins {
-        id 'com.github.johnrengelman.shadow' version '6.0.0'
+    repositories {
+        gradlePluginPortal()
     }
 }
-include ':APClient'
-project(":APClient").projectDir = file("../Archipelago.MultiClient.Java")
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+include("client")
