@@ -2,12 +2,13 @@ package gg.archipelago.neodigap.data;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.world.level.saveddata.SavedData;
 
 import java.util.*;
 
 import static net.neoforged.neoforge.common.util.NeoForgeExtraCodecs.setOf;
 
-public class ShopData {
+public class ShopData extends SavedData {
     // Item Shop: purchased shop location indices (0-19)
     private Set<Integer> purchasedShopLocations = new HashSet<>();
     // Item Shop: cached item flags from scouting (index -> flags)
@@ -35,5 +36,50 @@ public class ShopData {
         this.shopItemNames = shopItemNames;
         this.shopItemPlayers = shopItemPlayers;
         this.shopTierUnlocked = shopTierUnlocked;
+    }
+
+    public Set<Integer> getPurchasedShopLocations() {
+        return purchasedShopLocations;
+    }
+
+    public void setPurchasedShopLocations(Set<Integer> purchasedShopLocations) {
+        this.purchasedShopLocations = new HashSet<>(purchasedShopLocations);
+        this.setDirty();
+    }
+
+    public Map<Integer, Integer> getShopItemFlags() {
+        return shopItemFlags;
+    }
+
+    public void setShopItemFlags(Map<Integer, Integer> shopItemFlags) {
+        this.shopItemFlags = shopItemFlags;
+        this.setDirty();
+    }
+
+    public Map<Integer, String> getShopItemNames() {
+        return shopItemNames;
+    }
+
+    public void setShopItemNames(Map<Integer, String> shopItemNames) {
+        this.shopItemNames = shopItemNames;
+        this.setDirty();
+    }
+
+    public Map<Integer, String> getShopItemPlayers() {
+        return shopItemPlayers;
+    }
+
+    public void setShopItemPlayers(Map<Integer, String> shopItemPlayers) {
+        this.shopItemPlayers = shopItemPlayers;
+        this.setDirty();
+    }
+
+    public int getShopTierUnlocked() {
+        return shopTierUnlocked;
+    }
+
+    public void setShopTierUnlocked(int shopTierUnlocked) {
+        this.shopTierUnlocked = shopTierUnlocked;
+        this.setDirty();
     }
 }
